@@ -29,7 +29,7 @@
       </ion-header-bar>
 
 
-      <ion-content ng-controller = "AppController">
+      <ion-content ng-controller="AppController">
         <div class="list">
           <div class="card">
             <div class="item item-divider">
@@ -37,11 +37,11 @@
             </div>
             <label class="item item-input item-stacked-label">
               <span class="input-label"> Water (Gal) </span>
-              <input type="text" placeholder="0.0" ng-model = "mixedWater">
+              <input type="number" placeholder="0.0" ng-model="mixedWater">
             </label>
             <label class="item item-input item-stacked-label">
               <span class="input-label">Concentrate (Oz)</span>
-              <input type="number" placeholder="0.0" ng-model = "mixedConcentrate">
+              <input type="number" placeholder="0.0" ng-model="mixedConcentrate">
             </label>
           </div>
 
@@ -51,7 +51,7 @@
             </div>
             <label class="item item-input item-stacked-label">
               <span class="input-label"> Water (Gal) </span>
-              <input type="text" placeholder="0.0" ng-model = "sprayedWater">
+              <input type="number" placeholder="0.0" ng-model="sprayedWater">
             </label>
             <label class="item item-input item-stacked-label">
               <span class="input-label">Concentrate (Oz)</span>
@@ -60,7 +60,7 @@
             </label>
           </div>
         </div>
-          <button ng-click = "calculateConcentrateSprayed()" class="button button-full button-assertive button-large">
+          <button ng-click="calculateConcentrateSprayed()" class="button button-full button-assertive button-large">
             Calculate Concentrate Sprayed
           </button>
       </ion-content>
