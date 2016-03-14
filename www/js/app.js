@@ -30,8 +30,7 @@ angular.module('starter', ['ionic'])
   $scope.sprayedConcentrate = ""
 
   $scope.calculateConcentrateSprayed = function(){
-
-    $scope.sprayedConcentrate = ($scope.mixedWater * $scope.mixedConcentrate ) / $scope.sprayedWater || "Invalid Inputs"
+    $scope.sprayedConcentrate = $scope.sprayedWater / $scope.mixedWater  * $scope.mixedConcentrate || "Invalid Inputs"
   }
 
 })
