@@ -28,11 +28,6 @@ angular.module('starter', ['ionic'])
   $scope.mixedConcentrate;
   $scope.sprayedWater;
   $scope.sprayedConcentrate = ""
-  $scope.gram = 1
-  $scope.ounce = 28.3495
-  $scope.pound = 453.592
-  $scope.inputCoefficient = 1
-  $scope.outputCoefficient  = 1
 
   $scope.options = [
     {
