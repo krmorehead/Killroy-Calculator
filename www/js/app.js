@@ -28,11 +28,33 @@ angular.module('starter', ['ionic'])
   $scope.mixedConcentrate;
   $scope.sprayedWater;
   $scope.sprayedConcentrate = ""
+  $scope.gram = 1
+  $scope.ounce = 28.3495
+  $scope.pound = 453.592
+  $scope.inputCoefficient = 1
+  $scope.outputCoefficient  = 1
+
+  $scope.options = [
+    {
+      name:"gram",
+      value:1
+    },
+    {
+      name:"ounce",
+      value:28.3495
+    },
+    {
+      name:"pound",
+      value:453.592
+    }
+  ]
 
   $scope.calculateConcentrateSprayed = function(){
-    $scope.sprayedConcentrate = $scope.sprayedWater / $scope.mixedWater  * $scope.mixedConcentrate || "Invalid Inputs"
+    var coefficient = formulaCoefficent()
+    $scope.sprayedConcentrate = coefficient * ( $scope.sprayedWater / $scope.mixedWater  * $scope.mixedConcentrate ) || "Invalid Inputs"
   }
 
+  var formulaCoefficent = function(){
+    return $scope.inputCoefficient.value / $scope.outputCoefficient.value
+  }
 })
-
-//( Concentration(oz) * the water(gal) sprayed ) / ( Water(gal) of materials )

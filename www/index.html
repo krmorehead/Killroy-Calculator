@@ -30,6 +30,7 @@
 
 
       <ion-content ng-controller="AppController">
+
         <div class="list">
           <div class="card">
             <div class="item item-divider">
@@ -40,7 +41,10 @@
               <input type="number" placeholder="0.0" ng-model="mixedWater">
             </label>
             <label class="item item-input item-stacked-label">
-              <span class="input-label">Concentrate (Oz)</span>
+              <span class="input-label">Concentrate
+                <select ng-init = "inputCoefficient = options[1]" ng-model = "inputCoefficient" ng-options = "option.name for option in options">
+                </select>
+              </span>
               <input type="number" placeholder="0.0" ng-model="mixedConcentrate">
             </label>
           </div>
@@ -54,7 +58,10 @@
               <input type="number" placeholder="0.0" ng-model="sprayedWater">
             </label>
             <label class="item item-input item-stacked-label">
-              <span class="input-label">Concentrate (Oz)</span>
+              <span class="input-label">Concentrate
+                <select ng-init = "outputCoefficient = options[1]" ng-model = "outputCoefficient" ng-options = "option.name for option in options">
+                </select>
+              </span>
               <h2>{{sprayedConcentrate}}</h2>
 
             </label>
